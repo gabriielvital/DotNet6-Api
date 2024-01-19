@@ -4,8 +4,9 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace GB.ApiDotNet6.Api.Controllers
 {
-    [Route("api/[controller]")]
+    
     [ApiController]
+    [Route("api/[controller]")]
     public class PersonController : Controller
     {
         private readonly IPersonService _personService;

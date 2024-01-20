@@ -42,6 +42,8 @@ namespace GB.ApiDotNet6.Application.Services
         public async Task<ResultService<PersonDTO>> GetByIdAsync(int id)
         {
             var person = await _personRepository.GetByIdAsync(id);
+            if (person == null)
+                return ResultService.Fail<PersonDTO>("Pessoa não encontrada!");
             return ResultService.Ok(_mapper.Map<PersonDTO>(person));
         }
     }

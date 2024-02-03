@@ -7,9 +7,9 @@ using System.Threading.Tasks;
 
 namespace GB.ApiDotNet6.Application.DTOs.Validations
 {
-    public class PersonDtoValidator : AbstractValidator<PersonDTO>
+    public class PersonDTOValidator : AbstractValidator<PersonDTO>
     {
-        public PersonDtoValidator() 
+        public PersonDTOValidator() 
         {
             RuleFor(x => x.Document)
                .NotEmpty()
